@@ -1,0 +1,36 @@
+<suite name="parallelSuite" parallel="tests" thread-count="1" verbose="1">
+    <test name="Chrome Tests">
+        <parameter name="browser" value="CHROME">
+            <classes>
+                <class name="LoginTests">
+                </class>
+            </classes></parameter>
+
+    </test>
+<!--    <test name="Firefox tests">-->
+<!--        <parameter name="browser" value="FIREFOX">-->
+<!--            <classes>-->
+<!--            <class name="LoginTests">-->
+<!--            </class>-->
+<!--        </classes></parameter>-->
+
+<!--    </test>-->
+
+<!--    <test name="Firefox tests2">-->
+<!--        <parameter name="browser" value="FIREFOX">-->
+<!--            <classes>-->
+<!--                <class name="LoginTests">-->
+<!--                </class>-->
+<!--            </classes></parameter>-->
+
+<!--    </test>-->
+
+<!--    <test name="Safari tests">-->
+<!--        <parameter name="browser" value="SAFARI">-->
+<!--            <classes>-->
+<!--                <class name="LoginTests">-->
+<!--                </class>-->
+<!--            </classes></parameter>-->
+
+<!--    </test>-->
+</suite>
