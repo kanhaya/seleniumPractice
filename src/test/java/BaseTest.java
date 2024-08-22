@@ -24,11 +24,12 @@ public class BaseTest {
         try {
             System.out.println(System.getProperty("env"));
             properties=new Properties();
-            inputStream  =this.getClass().getClassLoader().getResourceAsStream("stage/config.properties");
+            inputStream  =this.getClass().getClassLoader().getResourceAsStream("config.properties");
             properties.load(inputStream);
             Url.BASE_URL.setValue(properties.getProperty("baseUrl"));
-            this.pageFactory=new PageFactory(driver);
+            System.out.println(BASE_URL.getValue());
             driver= DriverManager.getInstance(browser).getDriver();
+            this.pageFactory=new PageFactory(driver);
             driver.get(Url.BASE_URL.getValue());
             driver.manage().window().maximize();
             inputStream.close();

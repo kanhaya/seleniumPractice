@@ -3,20 +3,21 @@ package com.pages;
 import com.pagefactory.BasePage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage {
 
     @FindBy(xpath = "//input[@id=\"login-button\"]")
-    WebElement loginButton;
+    private WebElement loginButton;
 
     @FindBy(xpath = "//input[@id=\"user-name\"]")
-    WebElement userName;
+    private WebElement userName;
 
     @FindBy(xpath = "//input[@id=\"password\"]")
-    WebElement password;
+    private WebElement password;
 
     public LoginPage(WebDriver driver) {
-        super(driver);
+       super(driver);
     }
 
     public void setUserName(String user){
