@@ -9,10 +9,10 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//input[@id=\"login-button\"]")
     WebElement loginButton;
 
-    @FindBy(xpath = "//input[@id= \"user-name\"]")
+    @FindBy(xpath = "//input[@id=\"user-name\"]")
     WebElement userName;
 
-    @FindBy(xpath = "//input[@id= \"password\"]")
+    @FindBy(xpath = "//input[@id=\"password\"]")
     WebElement password;
 
     public LoginPage(WebDriver driver) {

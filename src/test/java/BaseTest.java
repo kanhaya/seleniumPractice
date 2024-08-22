@@ -18,15 +18,15 @@ public class BaseTest {
     protected InputStream inputStream;
 
     // UI mode
-    @BeforeTest
+    @BeforeSuite
     @Parameters("browser")
     public void browserSetup(Browser browser) throws IOException {
         try {
+            System.out.println(System.getProperty("env"));
             properties=new Properties();
             inputStream  =this.getClass().getClassLoader().getResourceAsStream("stage/config.properties");
             properties.load(inputStream);
             Url.BASE_URL.setValue(properties.getProperty("baseUrl"));
-            System.out.println(BASE_URL.getValue().toString());
             this.pageFactory=new PageFactory(driver);
             driver= DriverManager.getInstance(browser).getDriver();
             driver.get(Url.BASE_URL.getValue());
@@ -41,7 +41,7 @@ public class BaseTest {
 
     }
 
-    @AfterTest
+    @AfterSuite
     public void tearDown(){
         DriverManager.quitDriver();
     }

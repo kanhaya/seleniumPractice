@@ -5,7 +5,6 @@
                 <class name="LoginTests">
                 </class>
             </classes></parameter>
-
     </test>
 <!--    <test name="Firefox tests">-->
 <!--        <parameter name="browser" value="FIREFOX">-->
